@@ -1,0 +1,30 @@
+# general
+seed: 66
+workers: 0
+dataset_dir: "./datasets"
+
+# train options
+batch_size: 1024
+image_size: 128
+start_epoch: 0
+epochs: 200
+dataset: "cam"
+
+# model options
+resnet: "ResNet18" # ResNet18 / ResNet34 / ResNet50
+feature_dim: 128
+model_path: "output/camelyon16_encoder.tar"
+reload: False
+
+
+prototype_image_size: 128
+seg_image_size: 2048
+df_list: "../data/CAMELYON16_128/CAMELYON16_128.csv" # 128x128 patch list file path 
+n_cluster: 15
+cluster_to_tissue_method: "top:10" 
+prototype_threshold: 0.8 
+data_dir: "../data/CAMELYON16/"
+seg_df_list: "../data/CAMELYON16/CAMELYON16_demodata.csv"
+
+save_prototype_seg: True
+save_prototype_seg_dir: "../data/CAMELYON16"

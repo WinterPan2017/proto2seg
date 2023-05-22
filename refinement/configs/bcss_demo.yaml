@@ -1,0 +1,40 @@
+seed: 123
+gpus: 8
+device: "cuda"
+amp: False
+
+# data
+dataset: "bcss"
+dataset_path: "../data/BCSS" 
+split_file: "../data/BCSS/BCSS_demodata.csv"
+prototype_mask_folder: "Proto2Seg_folder_name" 
+fully_supervised: True
+
+# model
+model: "linknet"
+pretrain: ""
+
+# train
+resume: False
+image_size: 
+  - 1024
+  - 1024
+start_epoch: 0
+epochs: 500
+batch_size: 1
+workers: 8
+lr: 1e-3
+weight_decay: 1e-5
+
+lr_warmup_epochs: 10
+lr_warmup_method: "linear"
+lr_warmup_decay: 0.01
+
+
+
+# log
+print_freq: 10
+check_freq: 9999
+save_freq: 0
+output_dir: "./logs/"
+description: "bcss_refinement"

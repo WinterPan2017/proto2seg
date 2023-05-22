@@ -1,0 +1,17 @@
+numpy==1.22.4
+torch==1.8.1
+torchvision==0.9.1
+tqdm==4.64.0
+PyYAML==6.0
+opencv-python==4.5.5.64
+openpyxl==3.0.10
+pandas==1.4.2
+Pillow==9.0.1
+tensorboard==2.9.1
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+pyparsing==3.0.9
+scikit-image==0.19.3
+scikit-learn==1.1.1
+scikit-learn-extra==0.2.0
+scipy==1.8.1

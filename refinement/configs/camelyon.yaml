@@ -1,0 +1,41 @@
+seed: 123
+gpus: 8
+device: "cuda"
+amp: False
+
+# data
+dataset: "camelyon"
+dataset_path: "path/to/dataset" 
+split_file: "path/to/split" 
+prototype_mask_folder: "Proto2Seg_folder_name" 
+fully_supervised: False
+
+# model
+model: "linknet"
+pretrain : ""
+
+# train
+resume: False
+image_size: 
+  - 2048
+  - 2048
+start_epoch: 0
+epochs: 500
+batch_size: 8
+workers: 8
+lr: 1e-4
+weight_decay: 1e-5
+
+lr_warmup_epochs: 0
+lr_warmup_method: "linear"
+lr_warmup_decay: 0.01
+
+
+
+# log
+print_freq: 10
+check_freq: 9999
+save_freq: 0
+
+output_dir: "./logs/"
+description: "camelyon16_refinement"
